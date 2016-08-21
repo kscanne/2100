@@ -37,6 +37,7 @@ void TOH(int n, Pole start, Pole goal, Pole temp) {
 // It defines the pole order and the number of disks to be moved.
 // (ii) DOMOVE describes a move operation.
 // It defines the start and goal pole for the disk to be moved.
+enum TOHop {DOMOVE, DOTOH};
 class TOHobj { // An operation object
 public:
   TOHop op;              // This operation type
