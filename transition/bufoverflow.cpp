@@ -9,14 +9,15 @@ int main() {
   // and weird things will happen
   cout << "how many numbers to enter: ";
   cin >> len;
-  for (int i = 0; i < len; i++) {
-    cout << "Enter value #" << i << ": ";
-    cin >> myarray[i];
-  }
 
   //cout << "pointer to len = " << &len << "\n";
   for (int i = 0; i < len; i++) {
     //cout << "pointer = " << myarray+i << "\n";
+    cout << "Enter value #" << i << ": ";
+    cin >> myarray[i];
+  }
+
+  for (int i = 0; i < len; i++) {
     cout << "element at index " << i << " = " << myarray[i] << "\n";
   }
  
