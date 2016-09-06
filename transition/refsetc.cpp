@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std;
 
+// void printScaled(RichPoint* p) {
+// void printScaled(const RichPoint& p) {
+// void printScaled(RichPoint& p) {
 void printScaled(RichPoint p) {
   p.scale(1.0/p.distance(RichPoint(0,0)));
   cout << p << endl;
