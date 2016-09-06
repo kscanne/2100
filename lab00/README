@@ -21,7 +21,7 @@ coordinate to see if it is negative, and if it is, changes
 that coordinate to be positive (multiply it by -1). 
 Compile and convince yourself that your code works.
 
-(5) You might decide that the operation in step (3), ensuring
+(5) You might decide that the operation in step (4), ensuring
 that each coordinate of the vector is positive, is something
 you do frequently enough that you'd like to make it a
 method of Vector3D.  Do that, by adding a method
