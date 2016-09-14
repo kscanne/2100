@@ -42,11 +42,14 @@ of that method from alist.h and llist.h.
 (2) Provide another generic method in list.h implemented entirely
 in terms of virtual methods, with this signature:
 
-bool find(const E& item) const {....}
+bool find(const E& item) {....}
 
 It should return true if and only if the object "item" is contained in the 
 list.  See p. 99 of the text for an implementation as a standalone
-function that you can use as a model.
+function that you can use as a model. Note that this isn't declared
+as const (even though in a sense it ought to be) since an implementation
+will require looping over the list, which is non-const since we 
+maintain the current position as state.
 
 (3) [Shaffer exercise 4.6] Add to the LList class a method to reverse the order of the elements in the list.  Your algorithm should run in linear time in the number of elements in the list.
 
