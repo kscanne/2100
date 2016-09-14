@@ -75,4 +75,11 @@ public:
 
   // Return: The current element.
   virtual const E& getValue() const = 0;
+
+  bool find(const E& item) {
+    for (moveToStart(); currPos()<length(); next()) {
+      if (item == getValue()) return true;
+    }
+    return false;
+  }
 };

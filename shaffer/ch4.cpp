@@ -36,6 +36,13 @@ L2.insert(39);
 L2.next();
 L2.insert(12);
 
+if (L2.find(12)) {
+  cout << "found 12...\n";
+}
+if (!L2.find(120)) {
+  cout << "did not find 120...\n";
+}
+
 for (L2.moveToStart(); L2.currPos()<L2.length(); L2.next()) {
   it = L2.getValue();
   doSomething(it);
