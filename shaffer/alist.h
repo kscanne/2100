@@ -28,12 +28,6 @@ public:
 
   ~AList() { delete [] listArray; } // Destructor
 
-  void clear() {                    // Reinitialize the list
-    delete [] listArray;            // Remove the array
-    listSize = curr = 0;            // Reset the size
-    listArray = new E[maxSize];  // Recreate array
-  }
-
   // Insert "it" at current position
   void insert(const E& it) {
     Assert(listSize < maxSize, "List capacity exceeded");
@@ -41,11 +35,6 @@ public:
       listArray[i] = listArray[i-1];  //   to make room
     listArray[curr] = it;
     listSize++;                       // Increment list size
-  }
-
-  void append(const E& it) {       // Append "it"
-    Assert(listSize < maxSize, "List capacity exceeded");
-    listArray[listSize++] = it;
   }
 
   // Remove and return the current element.
@@ -57,10 +46,6 @@ public:
     listSize--;                          // Decrement size
     return it;
   }
-  void moveToStart() { curr = 0; }        // Reset position
-  void moveToEnd() { curr = listSize; }     // Set at end
-  void prev() { if (curr != 0) curr--; }       // Back up
-  void next() { if (curr < listSize) curr++; } // Next
 
   // Return list size
   int length() const  { return listSize; }
