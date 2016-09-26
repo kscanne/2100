@@ -44,7 +44,7 @@ public:
 
   ~Graphl() {       // Destructor
     delete [] mark; // Return dynamically allocated memory
-    for (int i=0; i<numVertex; i++) delete [] vertex[i];
+    for (int i=0; i<numVertex; i++) delete vertex[i];
     delete [] vertex;
   }
 
