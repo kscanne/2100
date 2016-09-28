@@ -47,12 +47,6 @@ while (index < length of the input string) {
 }
 If the stack is empty, return true, else return false.
 
-
-This is called "shift-reduce" parsing.
-The one case where you pop of 'E' and push on five new characters 
-is called a "shift" operation; the cases where you simply
-pop the top of the stack and increment i are "reduce" operations.
-
 Exercises:
 (a) Implement the above algorithm, and test it thoroughly on a
 set of valid and invalid input strings.
