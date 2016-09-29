@@ -32,7 +32,7 @@ Push the char 'E' onto the stack.
 Set a counter i = 0; this is the index of the first
 character in the input string.
 
-while (index < length of the input string) {
+while (i < length of the input string) {
    Let c be the character in the input string at index i.
    Let s be the character on top of the stack (without popping it yet;
      if the stack is empty, return false)
