@@ -9,28 +9,43 @@ int count(BinNode<E>* root) {
            + count(root->right());
 }
 
+int max(int a, int b) {
+  if (a>b) return a;
+  return b;
+}
+
 template <typename E>
 int height(BinNode<E>* root) {
-  return 0;
+  if (root == NULL) return 0;
+  return 1+max(height(root->left()), height(root->right()));
 }
 
 template <typename E>
 int leaf_count(BinNode<E>* root) {
-  return 0;
+  if (root == NULL) return 0;
+  if (root->isLeaf()) return 1;
+  return leaf_count(root->left())+leaf_count(root->right());
 }
 
 template <typename E>
 int sum_nodes(BinNode<E>* root) {
-  return 0;
+  if (root == NULL) return 0;
+  return root->element()+sum_nodes(root->left())+sum_nodes(root->right());
 }
 
 template <typename E>
 bool search(BinNode<E>* root, const E& val) {
-  return false;
+  if (root == NULL) return false;
+  if (root->element() == val) return true;
+  return (search(root->left(),val) || search(root->right(),val));
 }
 
 template <typename E>
 void print_tree(BinNode<E>* root) {
+  if (root == NULL) return;
+  cout << root->element() << endl;
+  print_tree(root->left());
+  print_tree(root->right());
 }
 
 template <typename E>
