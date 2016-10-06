@@ -24,6 +24,9 @@ The example I created is the tree
         /  \
        /    \
       2      3
+     / \  
+    /   \ 
+   4     5
 
 but to thoroughly test your functions, you'll want to create
 (many!) more trees in a similar fashion. 
