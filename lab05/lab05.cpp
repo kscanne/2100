@@ -1,5 +1,6 @@
 #include "book.h"
 #include "BSTNode.h"
+#include "aqueue.h"
 
 // Count the number of nodes in a binary tree
 template <typename E>
@@ -50,6 +51,16 @@ void print_tree(BinNode<E>* root) {
 
 template <typename E>
 void print_tree_by_level(BinNode<E>* root) {
+  AQueue<BinNode<E>*> todo(100);
+  todo.enqueue(root);
+  while (todo.length() > 0) {
+    BinNode<E>* temp = todo.dequeue();
+    if (temp != NULL) {
+      cout << temp->element() << endl;
+      todo.enqueue(temp->left());
+      todo.enqueue(temp->right());
+    }
+  }
 }
 
 int main()
@@ -61,7 +72,10 @@ int main()
   left->setRight(new BSTNode<int,int>(5,5));
   root->setLeft(left);
   root->setRight(right);
+  cout << "print tree:" << endl;
   print_tree(root);
+  cout << "print tree by level:" << endl;
+  print_tree_by_level(root);
   cout << " Node count = " << count(root) << endl;
   cout << " Height = " << height(root) << endl;
   cout << " Leaf count = " << leaf_count(root) << endl;
