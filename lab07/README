@@ -1,2 +1,4 @@
 implement a priority queue based on Shaffer's heap,
 then implement heapsort, analyze run time.
+
+See Shaffer 7.6 for more information also.
