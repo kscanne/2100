@@ -1,0 +1,14 @@
+
+(1) [Shaffer, Exercise 5.18] Write a function that prints out the node
+values for a binary tree in sorted order from highest to lowest.  You can
+assume that the tree satisfies the Binary Search Tree Property.
+
+(2) [Shaffer, Exercise 5.20] Write a recursive function named printRange
+that, given the pointer to the root of a BST, a low key value, and a high
+key value, prints in sorted order all records whose key values fall
+between the two given keys. It should visit as few nodes in the BST
+as possible.
+
+(3) [Shaffer, Exercise 5.21] Write a recursive function naked checkBST
+that, given the pointer to the root of a binary tree, will return true
+if and only if the tree satisfies the Binary Search Tree Property.
