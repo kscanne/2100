@@ -11,6 +11,6 @@ This is easy to achieve with small changes to the previous exercise,
 but here you should ensure that the function visits as few nodes in
 the tree as possible.
 
-(3) [Shaffer, Exercise 5.21] Write a recursive function naked checkBST
+(3) [Shaffer, Exercise 5.21] Write a recursive function named checkBST
 that, given the pointer to the root of a binary tree, will return true
 if and only if the tree satisfies the Binary Search Tree Property.
