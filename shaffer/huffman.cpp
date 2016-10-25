@@ -180,7 +180,7 @@ void do_commands(HuffTree<char>* theTree,
                  CodeTable<char>* theTable, FILE *fp)
 {
   int currchar;
-  char buff[80];
+  char buff[100];
 
   while (fgets(buff, 99, fp)) {
     if (strncmp(buff, "decode", 6) == 0) {
