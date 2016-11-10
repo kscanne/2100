@@ -25,6 +25,14 @@ of the format, and whether you're able to find examples of
 interesting graphs saved in these formats online, since you'll
 need them for next week.
 
+I'd suggest a design that passes a reference to an ostream
+to the export methods, and a reference to an istream to the
+import methods.  Then, in your main, you can create an
+ofstream or ifstream attached to a file and pass that to 
+the import/export.  The point is that there are other kinds
+of ostreams/istreams that you might conceivably want to write
+to (cout/cin for example!) and this design allows that.
+
 You'll find the Shaffer's abstract base class Graph in
 ../shaffer/graph.h.  There are child implementations
 in grlist.h and grmat.h in case you're curious, but
