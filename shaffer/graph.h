@@ -51,4 +51,14 @@ public:
   // val: The value to set
   virtual int getMark(int v) =0;
   virtual void setMark(int v, int val) =0;
+
+  void exportCSV(ostream& o) {
+    int enn = n();
+    for (int i=0; i < enn; i++) {
+      for (int j=0; j < enn; j++) {
+        if (isEdge(i,j)) o << i << "," << j << endl;
+      }
+    }
+  }
+
 };

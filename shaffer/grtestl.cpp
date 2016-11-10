@@ -12,6 +12,7 @@
 
 // Include the graph classes -- Adjacency List
 #include "grlist.h"
+#include <fstream>
 
 // Simple program to test graph construction:
 // Version for Adjancency List representation
@@ -36,5 +37,8 @@ int main(int argc, char** argv) {
   }
 
   Gprint(G);
+
+  std::ofstream o("scannell.csv");
+  G->exportCSV(o);
   return 0;
 }
