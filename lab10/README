@@ -39,7 +39,9 @@ vertices in the graph gets established once and for all when
 the constructor is called.  This means that the import function
 should not be a method; make it a standalone function, and
 create the graph within that function once you know how many
-vertices there are.
+vertices there are. You can check out graphutil.cpp in Shaffer's
+code which has a function that imports from a non-standard file
+format of his devising (see the *.gph files in ../shaffer for example).
 
 You'll find the Shaffer's abstract base class Graph in
 ../shaffer/graph.h.  There are child implementations
