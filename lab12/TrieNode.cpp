@@ -2,7 +2,16 @@
 #include <string.h>
 #include <iostream>
 using namespace std;
-#define ALPHABET_SIZE 27
+// A-Z are 0...25, 26=punctuation, space, etc., 27 = $ (end of word)
+#define ALPHABET_SIZE 28
+
+int getIndex(char c) {
+  int ans=(int) (c-'A');
+  if (ans>=32) ans-=32;
+  if (ans < 0 || ans >= ALPHABET_SIZE-1)
+    ans=ALPHABET_SIZE-2;
+  return ans;
+}
 
 TrieNode::TrieNode() {
   fol = new TrieNode*[ALPHABET_SIZE];
@@ -45,11 +54,7 @@ int TrieNode::longestPrefix(const char* s) const {
     return 0;
   }
   else {
-    int index=(int) (s[0]-'A');
-    if (index < 0 || index >= ALPHABET_SIZE-1) {
-      cerr << "Error: illegal character " << s[0] << "\n";
-      return 0;
-    }
+    int index=getIndex(s[0]);
     if (fol[index]==0) {
       return 0;
     }
@@ -69,11 +74,7 @@ void TrieNode::insert(const char* s, int v) {
     }
   }
   else {
-    int index=(int) (s[0]-'A');
-    if (index < 0 || index >= ALPHABET_SIZE-1) {
-      cerr << "Error: illegal character " << s[0] << "\n";
-      return;
-    }
+    int index=getIndex(s[0]);
     if (fol[index]==0) {
       fol[index] = new TrieNode();
     }
@@ -91,11 +92,7 @@ int TrieNode::lookup(const char* s) const {
     }
   }
   else {
-    int index=(int) (s[0]-'A');
-    if (index < 0 || index >= ALPHABET_SIZE-1) {
-      cerr << "Error: illegal character " << s[0] << "\n";
-      return -1;
-    }
+    int index=getIndex(s[0]);
     if (fol[index]==0) {
       return -1;
     }
