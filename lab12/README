@@ -1,0 +1,8 @@
+
+In lecture we talked about a couple of different algorithms
+for find the longest common substring in two strings.
+
+Your challenge in this lab is to implement one of these
+algorithms, or one of your own, and find the longest common
+substring contained in the two text files startrek.txt
+and mobydick.txt (which you'll find in this directory).
