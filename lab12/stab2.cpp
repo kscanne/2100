@@ -38,5 +38,10 @@ int main() {
   s2[bestindex+1] = 0;
 
   cout << "Longest common substring:\n" << s2+bestindex-bestlen+1 << "\n";
+
+  for (int i=0; i < s1len; i++)
+    delete table[i];
+  delete table;
+
   return 0;
 }
