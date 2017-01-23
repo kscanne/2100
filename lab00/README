@@ -37,7 +37,7 @@ void Vector3D::absoluteValue() {
 
 in Vector3D.cpp.
 
-Then modify the main to simply call the normalize method.
+Then modify the main to simply call the absoluteValue method.
 
 (6) Extra time?  What additional methods might be useful for
 a general Vector3D class?  Decide on their names, return types,
