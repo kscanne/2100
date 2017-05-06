@@ -26,7 +26,7 @@ void findUI(const char* b, const char* s) {
 
 int main() {
 
-  char b[128];
+  char b[1024];
 
   cout << "Big string to search in: ";
   cin.getline(b,sizeof(b));
